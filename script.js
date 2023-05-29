@@ -1,3 +1,4 @@
+
 const box = document.querySelector('.box');
 const btn = document.querySelector('.button');
 const container = document.querySelector('.container');
@@ -7,6 +8,8 @@ const api = () => {
     .then(data => {
         btn.remove();
         container.style.height = 'auto';
+        box.style.height = '80vh';
+        box.style.opacity = '1';
         box.innerHTML = '';
         data.forEach((n) => {
             box.innerHTML += `<div class='card'>
@@ -22,6 +25,5 @@ const api = () => {
     })
 }
 
-btn.addEventListener('click', () => {
-    api();
-});
+btn.addEventListener('click', api);
+

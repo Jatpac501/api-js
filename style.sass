@@ -1,4 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;700&family=Playfair+Display:wght@400;700&display=swap')
+@font-face
+    font-family: 'Epistle'
+    src: url('fonts/Epistle.ttf') format('truetype')
+@font-face
+    font-family: 'Manrope'
+    src: url('fonts/Manrope.ttf') format('truetype')
 *
     margin: 0
     padding: 0
@@ -9,7 +14,7 @@
     flex-direction: column
     align-items: center
     justify-content: center
-    font-family: 'Open Sans', sans-serif
+    font-family: 'Manrope'
     transition: 1s
 .title
     font-size: 62px
@@ -22,10 +27,22 @@
     border-radius: 60px
     background: rgba(0,0,0,.2)
 .box
+    opacity: 0
+    border: 1px solid #000
+    border-radius: 28px
+    height: 0vh
+    overflow-x: hidden
+    overflow-y: scroll
     width: 80%
     display: flex
     flex-wrap: wrap
     justify-content: center
+    transition: 1s
+    user-select: none
+    &::-webkit-scrollbar
+        width: auto
+    
+
 .card
     display: flex
     flex-direction: column
@@ -36,10 +53,11 @@
     border: 1px solid #000
     border-radius: 20px
     gap: 20px
-.card__title, .card__body
-    font-family: 'Playfair Display', serif
+.card__title
+    font-family: 'Epistle'
 .card__body
     font-size: 20px
+    font-family: 'Manrope'
 .card__id 
     align-self: center
     font-weight: bold
